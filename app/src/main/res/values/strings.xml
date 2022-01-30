@@ -1,3 +1,19 @@
 <resources>
+
+<!--    TITLE'S-->
     <string name="app_name">Mi Jornada</string>
+    <string name="titulo_menu">Menu Principal</string>
+    <string name="titulo_menu_equipos">Equipos</string>
+    <string name="titulo_menu_partidos">Partidos</string>
+
+<!--    BUTTON'S-->
+    <string name="button_equipos">Equipos</string>
+    <string name="button_partidos">Partidos</string>
+    <string name="button_estadisticas">Estadisticas</string>
+    <string name="button_salir">Salir</string>
+    <string name="button_regresar">Regresar</string>
+    <string name="button_altas">Altas</string>
+    <string name="button_bajas">Bajas</string>
+    <string name="button_cambios">Cambios</string>
+
 </resources>

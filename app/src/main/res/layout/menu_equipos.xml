@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/titulo_menu"
+        android:text="@string/titulo_menu_equipos"
         android:textSize="25sp"
         android:textAlignment="center"
         android:fontFamily="sans-serif-light"
@@ -18,7 +17,6 @@
         android:padding="5dp"
         android:layout_marginTop="40dp"
         />
-
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +26,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/button_equipos"
+            android:text="@string/button_altas"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
@@ -41,7 +39,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/button_partidos"
+            android:text="@string/button_bajas"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
@@ -54,7 +52,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/button_estadisticas"
+            android:text="@string/button_cambios"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
@@ -65,10 +63,10 @@
             />
     </com.google.android.material.button.MaterialButtonToggleGroup>
     <com.google.android.material.button.MaterialButton
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="@string/button_salir"
-        android:maxWidth="100dp"
+        android:text="@string/button_regresar"
+        android:maxWidth="140dp"
         android:textSize="18sp"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold|italic"
@@ -78,6 +76,7 @@
         android:layout_marginTop="250dp"
         android:layout_marginEnd="20dp"
         tools:ignore="RtlHardcoded" />
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
