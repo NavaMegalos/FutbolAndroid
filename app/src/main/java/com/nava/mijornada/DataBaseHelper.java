@@ -15,6 +15,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(SQL_DELETE_TABLE_ESTADO);
+        db.execSQL(SQL_DELETE_TABLE_PARTIDO);
+        db.execSQL(SQL_DELETE_TABLE_EQUIPO);
+        db.execSQL(SQL_DELETE_TABLE_PARTIDO_EQUIPO);
+
         db.execSQL(SQL_CREATE_TABLE_ESTADO);
         db.execSQL(SQL_CREATE_TABLE_PARTIDO);
         db.execSQL(SQL_CREATE_TABLE_EQUIPO);
@@ -26,6 +31,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_TABLE_PARTIDO);
         db.execSQL(SQL_DELETE_TABLE_EQUIPO);
         db.execSQL(SQL_DELETE_TABLE_PARTIDO_EQUIPO);
+
+        db.execSQL(SQL_CREATE_TABLE_ESTADO);
+        db.execSQL(SQL_CREATE_TABLE_PARTIDO);
+        db.execSQL(SQL_CREATE_TABLE_EQUIPO);
+        db.execSQL(SQL_CREATE_TABLE_PARTIDO_EQUIPO);
         onCreate(db);
     }
 

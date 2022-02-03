@@ -1,10 +1,11 @@
 <resources>
 
 <!--    TITLE'S-->
-    <string name="app_name">Mi Jornada</string>
+    <string name="app_name">Control Estadistico</string>
     <string name="titulo_menu">Menu Principal</string>
     <string name="titulo_menu_equipos">Equipos</string>
     <string name="titulo_menu_partidos">Partidos</string>
+    <string name="titulo_estadisticas">Estadisticas</string>
 
 <!--    BUTTON'S-->
     <string name="button_equipos">Equipos</string>
@@ -15,5 +16,16 @@
     <string name="button_altas">Altas</string>
     <string name="button_bajas">Bajas</string>
     <string name="button_cambios">Cambios</string>
+    <string name="button_agregar">Agregar</string>
 
+<!--    TEXT BUTTON'S-->
+    <string name="info_principal_equipos">- Crear Equipos<br />\n- Realiza Cambios<br />\n- Elimina Equipos </string>
+    <string name="info_principal_partidos">- Asigna Roles De Partidos<br />\n- Realiza Cambios<br />\n- Asigna El Resultado </string>
+    <string name="info_principal_estadisticas">- Estadisticas Generales<br />\n- Partidos Totales De Cada Equipo<br />\n</string>
+<!--    HINT'S-->
+    <string name="nombre_equipo">Nombre Equipo…</string>
+    <string name="nombre_equipo1">Nombre Equipo 1…</string>
+    <string name="nombre_equipo2">Nombre Equipo 2…</string>
+    <string name="fecha">mm/dd/yy</string>
+    <string name="tiempo">hh:mm:ss</string>
 </resources>

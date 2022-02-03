@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F2F3F4"
     android:orientation="vertical">
 
     <com.google.android.material.textview.MaterialTextView
@@ -14,66 +15,77 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold|italic"
-        android:padding="5dp"
-        android:layout_marginTop="40dp"
+        android:textColor="#626567"
+        android:padding="20dp"
         />
-    <com.google.android.material.button.MaterialButtonToggleGroup
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:orientation="vertical"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         >
         <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_altas"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
             android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="#34495E"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            tools:ignore="RtlCompat,RtlHardcoded" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_bajas"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
             android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="#34495E"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            tools:ignore="RtlCompat,RtlHardcoded" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_cambios"
             android:maxWidth="200dp"
             android:textSize="18sp"
             android:fontFamily="sans-serif-light"
             android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:backgroundTint="#34495E"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            tools:ignore="RtlCompat,RtlHardcoded" />
+
+    </LinearLayout>
     <com.google.android.material.button.MaterialButton
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/button_regresar"
-        android:maxWidth="140dp"
+        android:maxWidth="100dp"
         android:textSize="18sp"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold|italic"
         style="@style/Widget.MaterialComponents.Button"
-        android:textColor="@android:color/white"
+        android:backgroundTint="#34495E"
+        android:textColor="@color/white"
         android:layout_gravity="right"
-        android:layout_marginTop="250dp"
         android:layout_marginEnd="20dp"
         tools:ignore="RtlHardcoded" />
 

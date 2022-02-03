@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_menu_equipos"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold|italic"
+        android:padding="5dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <ListView
+        android:id="@+id/list_view_cambios_equipos"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_regresar"
+        android:maxWidth="140dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold|italic"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@android:color/white"
+        android:layout_gravity="right"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="20dp"
+        tools:ignore="RtlHardcoded" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerInsetStart="16dp"
+        app:dividerInsetEnd="16dp"
+        app:dividerColor="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

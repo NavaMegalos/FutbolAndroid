@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26216216216216215" />
+        <entry key="app/src/main/res/layout/altas_equipos.xml" value="0.26216216216216215" />
+        <entry key="app/src/main/res/layout/altas_partidos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/bajas_equipos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/cambios_equipos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/estadisticas.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_equipos.xml" value="0.22" />
         <entry key="app/src/main/res/layout/menu_partidos.xml" value="0.24296875" />
       </map>

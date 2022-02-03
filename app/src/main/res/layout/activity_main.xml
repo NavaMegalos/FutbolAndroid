@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F2F3F4"
     tools:context=".MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
@@ -15,55 +16,97 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold|italic"
-        android:padding="5dp"
-        android:layout_marginTop="40dp"
+        android:textColor="#626567"
+        android:padding="20dp"
         />
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp"
-        >
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_equipos"
-            android:maxWidth="200dp"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_equipos"
+                android:maxWidth="200dp"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold|italic"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#34495E"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:onClick="onClickEquipos"
+                tools:ignore="RtlCompat,RtlHardcoded,UsingOnClickInXml" />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_partidos"
-            android:maxWidth="200dp"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_principal_equipos"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_estadisticas"
-            android:maxWidth="200dp"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold|italic"
-            style="@style/Widget.MaterialComponents.Button"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            />
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_partidos"
+                android:maxWidth="200dp"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold|italic"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#34495E"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:onClick="onClickPartidos"
+                tools:ignore="RtlCompat,RtlHardcoded,UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_principal_partidos"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_estadisticas"
+                android:maxWidth="200dp"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold|italic"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#34495E"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:onClick="onClickEstadisticas"
+                tools:ignore="RtlCompat,RtlHardcoded,UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:text="@string/info_principal_estadisticas"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+    </LinearLayout>
     <com.google.android.material.button.MaterialButton
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -72,12 +115,14 @@
         android:textSize="18sp"
         android:fontFamily="sans-serif-light"
         android:textStyle="bold|italic"
-        style="@style/Widget.MaterialComponents.Button"
-        android:textColor="@android:color/white"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="#34495E"
+        android:textColor="@color/white"
         android:layout_gravity="right"
-        android:layout_marginTop="250dp"
         android:layout_marginEnd="20dp"
-        tools:ignore="RtlHardcoded" />
+        android:onClick="onClickSalir"
+        tools:ignore="RtlHardcoded,UsingOnClickInXml" />
+
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

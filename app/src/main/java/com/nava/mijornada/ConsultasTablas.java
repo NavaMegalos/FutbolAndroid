@@ -7,7 +7,7 @@ public class ConsultasTablas {
 //    ESTADO
     static final String SQL_CREATE_TABLE_ESTADO =
             "CREATE TABLE " + Estado.TABLE_NAME + " (" +
-                    Estado._ID + " INTEGER PRIMARY KEY," +
+                    Estado._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     Estado.DESCRIPCION + " TEXT" +
                     ")";
     static final String SQL_DELETE_TABLE_ESTADO =
@@ -16,7 +16,7 @@ public class ConsultasTablas {
 //    PARTIDO
     static final String SQL_CREATE_TABLE_PARTIDO =
             "CREATE TABLE " + Partido.TABLE_NAME + " (" +
-                    Partido._ID + " INTEGER PRIMARY KEY," +
+                    Partido._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     Partido._ID_ESTADO + " INTEGER," +
                     Partido.FECHA + " TEXT," +
                     Partido.HORA_INICIO + " TEXT," +
@@ -32,7 +32,7 @@ public class ConsultasTablas {
 //    EQUIPO
     static final String SQL_CREATE_TABLE_EQUIPO =
             "CREATE TABLE " + Equipo.TABLE_NAME + " (" +
-                    Equipo._ID + " INTEGER PRIMARY KEY," +
+                    Equipo._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     Equipo.NOMBRE + " TEXT" +
                     ")";
     static final String SQL_DELETE_TABLE_EQUIPO =
@@ -41,7 +41,7 @@ public class ConsultasTablas {
 //    PARTIDO|EQUIPOS
     static final String SQL_CREATE_TABLE_PARTIDO_EQUIPO =
             "CREATE TABLE " + PartidoEquipo.TABLE_NAME + " (" +
-                    PartidoEquipo._ID + " INTEGER PRIMARY KEY," +
+                    PartidoEquipo._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     PartidoEquipo._ID_PARTIDO + " INTEGER," +
                     PartidoEquipo._ID_EQUIPO + " INTEGER," +
                     "FOREIGN KEY (" + PartidoEquipo._ID_PARTIDO +") " +

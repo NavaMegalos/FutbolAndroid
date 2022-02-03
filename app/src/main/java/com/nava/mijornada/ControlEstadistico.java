@@ -20,7 +20,7 @@ public final class ControlEstadistico {
     }
 
     public static class Equipo implements BaseColumns {
-        public static final String TABLE_NAME = "partido";
+        public static final String TABLE_NAME = "equipo";
         public static final String _ID = "id";
         public static final String NOMBRE = "nombre";
     }

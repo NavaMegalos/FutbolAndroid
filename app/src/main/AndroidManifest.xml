@@ -3,12 +3,48 @@
     package="com.nava.mijornada">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        <activity
+            android:name=".AltasEquipo"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".BajasEquipo"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".CambiosEquipo"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".AltasPartido"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".BajasPartido"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".CambiosPartido"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".PartidoView"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".EstadisticaView"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".EquipoView"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
