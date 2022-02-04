@@ -1,124 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#F2F3F4"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0277bd">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_menu_partidos"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="bold|italic"
-        android:textColor="#626567"
-        android:padding="20dp"
+    <ImageView
+        android:id="@+id/icon_app"
+        android:layout_width="42dp"
+        android:layout_height="56dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_app"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="153dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
+        android:padding="5dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintLeft_toRightOf="@+id/icon_app"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="15dp"
+        android:background="#fafafa"
         android:orientation="vertical"
-        >
+        app:layout_constraintTop_toBottomOf="@id/title">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/altas_partido_equipo1"
+
+        <TextView
+            android:id="@+id/subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:padding="5dp"
-            android:inputType="textAutoComplete"
-            android:hint="@string/nombre_equipo1"
-            android:layout_marginTop="15dp"
-            app:startIconDrawable="@drawable/ic_baseline_equipo_circle_24"
-            >
+            android:text="@string/titulo_menu_partidos"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/cardview_dark_background"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/seleccion_equipos"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/altas_partido_equipo2"
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.DropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:inputType="textAutoComplete"
-            android:hint="@string/nombre_equipo2"
-            app:startIconDrawable="@drawable/ic_baseline_equipo_circle_24"
-            >
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.DropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:inputType="date"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/asigna_fecha"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:hint="@string/fecha"
-            app:startIconDrawable="@drawable/ic_baseline_date_range_24"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_date"
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fecha_altas_partido"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:inputType="time"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/asigna_hora"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:hint="@string/tiempo"
-            app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_time"
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/hora_altas_partido"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="115dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
             android:text="@string/button_agregar"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            />
+            android:textAlignment="center"
+            android:textColor="#263238"
+            android:textStyle="bold"
+            android:onClick="onClickAltas"
+            tools:ignore="UsingOnClickInXml" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_regresar"
-        android:maxWidth="140dp"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="bold|italic"
-        style="@style/Widget.MaterialComponents.Button"
-        android:textColor="@android:color/white"
-        android:layout_gravity="right"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="RtlHardcoded" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onClickRegresar"
+            android:text="@string/button_regresar"
+            android:drawableLeft="@drawable/ic_baseline_in"
+            android:textColor="#263238"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlHardcoded,UsingOnClickInXml" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerInsetStart="16dp"
-        app:dividerInsetEnd="16dp"
-        app:dividerColor="@android:color/darker_gray"
-        android:layout_marginTop="20dp"
-        />
-
-
-</androidx.appcompat.widget.LinearLayoutCompat>

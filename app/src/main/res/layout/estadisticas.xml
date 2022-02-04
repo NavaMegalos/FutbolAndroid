@@ -18,13 +18,13 @@
         android:layout_marginTop="40dp"
         />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_view_bajas_equipos"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:orientation="vertical">
-
-    </ListView>
+        android:orientation="vertical"
+        tools:listitem="@layout/estadistica_item"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="150dp"
@@ -49,6 +49,4 @@
         app:dividerColor="@android:color/darker_gray"
         android:layout_marginTop="20dp"
         />
-
-
 </LinearLayout>

@@ -52,89 +52,39 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
-            android:text="@string/titulo_menu_equipos"
+            android:text="@string/titulo_menu_partidos"
             android:textAlignment="textEnd"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:textColor="@color/cardview_dark_background"/>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="230dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:drawableEnd="@drawable/ic_baseline_add"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/button_altas"
-            android:textAlignment="textStart"
-            android:textColor="#263238"
-            android:textStyle="bold"
-            android:onClick="onClickAltas"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_altas_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="15dp"
-            android:text="@string/button_bajas"
-            android:drawableEnd="@drawable/ic_baseline_remove"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickBajas"
-            tools:ignore="UsingOnClickInXml" />
+            android:padding="15dp"
+            >
 
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_bajas_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_partidos"
+                android:layout_weight="1"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/button_cambios"
-            android:drawableEnd="@drawable/ic_baseline_rename"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickCambios"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_cambios_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
+        </LinearLayout>
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"

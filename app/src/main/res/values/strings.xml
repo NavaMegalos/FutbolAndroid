@@ -6,7 +6,6 @@
     <string name="titulo_menu_equipos">Equipos</string>
     <string name="titulo_menu_partidos">Partidos</string>
     <string name="titulo_estadisticas">Estadisticas</string>
-
 <!--    BUTTON'S-->
     <string name="button_equipos">Equipos</string>
     <string name="button_partidos">Partidos</string>
@@ -17,11 +16,30 @@
     <string name="button_bajas">Bajas</string>
     <string name="button_cambios">Cambios</string>
     <string name="button_agregar">Agregar</string>
-
-<!--    TEXT BUTTON'S-->
-    <string name="info_principal_equipos">- Crear Equipos<br />\n- Realiza Cambios<br />\n- Elimina Equipos </string>
-    <string name="info_principal_partidos">- Asigna Roles De Partidos<br />\n- Realiza Cambios<br />\n- Asigna El Resultado </string>
-    <string name="info_principal_estadisticas">- Estadisticas Generales<br />\n- Partidos Totales De Cada Equipo<br />\n</string>
+    <string name="button_resultado">Resultado</string>
+    <string name="button_eliminar">Eliminar</string>
+    <string name="button_actualizar_cambios">Realizar Cambios</string>
+    <string name="button_aceptar">Aceptar</string>
+<!--    TEXT RELATED-TO BUTTON'S-->
+    <string name="info_principal_equipos">- Crea Equipos.<br />\n- Realiza Cambios.<br />\n- Elimina Equipos.</string>
+    <string name="info_principal_partidos">- Asigna Roles De Partidos.<br />\n- Realiza Cambios.<br />\n- Asigna El Resultado.</string>
+    <string name="info_principal_estadisticas">- Visualiza Las Estadisticas Generales.<br />\n- Visualiza Los Partidos Totales De Cada Equipo.<br />\n</string>
+    <string name="info_altas_equipos">- Crea Equipos Nuevos.</string>
+    <string name="info_bajas_equipos">- Elimina Equipos Previamente Creado.</string>
+    <string name="info_cambios_equipos">- Realiza El Cambio De Nombre De Algun Equipo Previamente Creado.</string>
+    <string name="info_altas_partidos">- Crea Partidos Nuevos.</string>
+    <string name="info_bajas_partidos">- Elimina Partidos Previamente Creado.</string>
+    <string name="info_cambios_partidos">- Realiza El Cambio De Fecha/Hora De Algun Partido Previamente Creado.</string>
+    <string name="info_resultados_partidos">- Asigna Resultado A Algun Partido Previamente Creado.</string>
+    <string name="info_nombre_nuevo_equipo">Asigna Un Nombre Al Nuevo Equipo.</string>
+    <string name="info_nombre_baja_equipo">Ingresa El Nombre Del Equipo A Eliminar.</string>
+    <string name="seleccion_equipos">Selecciona Los Equipos:</string>
+    <string name="seleccion_baja_partido">Selecciona El Partido A Eliminar:</string>
+    <string name="seleccion_partido">Selecciona El Partido:</string>
+    <string name="seleccion_resultado">Selecciona El Resultado:</string>
+    <string name="datos_generales_partido">Datos Partido</string>
+    <string name="asigna_fecha">Fecha:</string>
+    <string name="asigna_hora">Hora:</string>
 <!--    HINT'S-->
     <string name="nombre_equipo">Nombre Equipo…</string>
     <string name="nombre_equipo1">Nombre Equipo 1…</string>

@@ -3,14 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_sports_soccer.xml" value="0.262037037037037" />
+        <entry key="app/src/main/res/drawable/ic_baseline_sports_soccer_24.xml" value="0.262037037037037" />
+        <entry key="app/src/main/res/drawable/ic_sports_soccer.xml" value="0.16261261261261262" />
+        <entry key="app/src/main/res/layout-v28/activity_main.xml" value="0.303125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26216216216216215" />
-        <entry key="app/src/main/res/layout/altas_equipos.xml" value="0.26216216216216215" />
-        <entry key="app/src/main/res/layout/altas_partidos.xml" value="0.24296875" />
-        <entry key="app/src/main/res/layout/bajas_equipos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/altas_equipos.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/altas_partidos.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/bajas_equipos.xml" value="0.26216216216216215" />
+        <entry key="app/src/main/res/layout/bajas_partidos.xml" value="0.24711111111111111" />
         <entry key="app/src/main/res/layout/cambios_equipos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/cambios_partido_especifico.xml" value="0.25866666666666666" />
+        <entry key="app/src/main/res/layout/cambios_partidos.xml" value="0.24711111111111111" />
+        <entry key="app/src/main/res/layout/estadistica_item.xml" value="0.18513513513513513" />
         <entry key="app/src/main/res/layout/estadisticas.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/menu_equipos.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/menu_equipos.xml" value="0.26216216216216215" />
         <entry key="app/src/main/res/layout/menu_partidos.xml" value="0.24296875" />
+        <entry key="app/src/main/res/layout/resultados_partidos.xml" value="0.24711111111111111" />
       </map>
     </option>
   </component>

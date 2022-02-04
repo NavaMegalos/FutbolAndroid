@@ -52,88 +52,109 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
-            android:text="@string/titulo_menu_equipos"
+            android:text="@string/titulo_menu_partidos"
             android:textAlignment="textEnd"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:textColor="@color/cardview_dark_background"/>
 
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/seleccion_equipos"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/asigna_fecha"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/fecha"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_date"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fecha_altas_partido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:text="@string/asigna_hora"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/tiempo"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/ic_baseline_time"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/hora_altas_partido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:drawableEnd="@drawable/ic_baseline_add"
+            android:layout_marginTop="15dp"
             android:drawablePadding="5dp"
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
-            android:text="@string/button_altas"
-            android:textAlignment="textStart"
+            android:text="@string/button_actualizar_cambios"
+            android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
             android:onClick="onClickAltas"
             tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_altas_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/button_bajas"
-            android:drawableEnd="@drawable/ic_baseline_remove"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickBajas"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_bajas_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/button_cambios"
-            android:drawableEnd="@drawable/ic_baseline_rename"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickCambios"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_cambios_equipos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -141,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-light"
             android:onClick="onClickRegresar"
             android:text="@string/button_regresar"
@@ -152,3 +173,4 @@
             tools:ignore="RtlHardcoded,UsingOnClickInXml" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
