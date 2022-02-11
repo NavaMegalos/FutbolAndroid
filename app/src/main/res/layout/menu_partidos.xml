@@ -65,12 +65,12 @@
             android:drawableEnd="@drawable/ic_baseline_add"
             android:drawablePadding="5dp"
             android:fontFamily="@font/montserrat"
+            android:onClick="onClickAltas"
             android:padding="10dp"
             android:text="@string/button_altas"
             android:textAlignment="textStart"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
             tools:ignore="UsingOnClickInXml" />
 
         <TextView
@@ -145,7 +145,7 @@
             android:textStyle="bold"
             android:padding="10dp"
             android:textColor="#263238"
-            android:onClick="onClickCambios"
+            android:onClick="onClickResultados"
             tools:ignore="UsingOnClickInXml" />
 
         <TextView
@@ -163,12 +163,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:drawableLeft="@drawable/ic_baseline_in"
             android:fontFamily="sans-serif-light"
             android:onClick="onClickRegresar"
             android:text="@string/button_regresar"
-            android:drawableLeft="@drawable/ic_baseline_in"
             android:textColor="#263238"
             android:textSize="15sp"
             android:textStyle="bold|italic"

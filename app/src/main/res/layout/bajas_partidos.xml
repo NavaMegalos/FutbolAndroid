@@ -68,6 +68,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp_bajas_partido"
             style="@style/Widget.AppCompat.Spinner.DropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,6 +119,7 @@
                         android:textStyle="bold|italic" />
 
                     <TextView
+                        android:id="@+id/tv_equipo1_bajas_partido"
                         android:layout_width="370dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -128,6 +130,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tv_equipo2_bajas_partido"
                         android:layout_width="370dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -160,6 +163,7 @@
                                 android:textStyle="bold|italic" />
 
                             <TextView
+                                android:id="@+id/tv_fecha_bajas_partido"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAlignment="center"
@@ -189,6 +193,7 @@
                                 android:textStyle="bold|italic" />
 
                             <TextView
+                                android:id="@+id/tv_hora_bajas_partido"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAlignment="center"
@@ -212,12 +217,12 @@
             android:layout_marginTop="15dp"
             android:drawablePadding="5dp"
             android:fontFamily="@font/montserrat"
+            android:onClick="onClickEliminar"
             android:padding="10dp"
             android:text="@string/button_eliminar"
             android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
             tools:ignore="UsingOnClickInXml" />
 
         <com.google.android.material.button.MaterialButton

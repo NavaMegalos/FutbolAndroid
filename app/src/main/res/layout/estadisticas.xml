@@ -1,52 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:background="#0277bd">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_estadisticas"
-        android:textSize="25sp"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="bold|italic"
+    <ImageView
+        android:id="@+id/icon_app"
+        android:layout_width="42dp"
+        android:layout_height="56dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_app"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="153dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat"
         android:padding="5dp"
-        android:layout_marginTop="40dp"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintLeft_toRightOf="@+id/icon_app"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_view_bajas_equipos"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="15dp"
+        android:background="#fafafa"
         android:orientation="vertical"
-        tools:listitem="@layout/estadistica_item"
-        />
+        app:layout_constraintTop_toBottomOf="@id/title">
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_regresar"
-        android:maxWidth="100dp"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="bold|italic"
-        style="@style/Widget.MaterialComponents.Button"
-        android:backgroundTint="#34495E"
-        android:textColor="@color/white"
-        android:layout_gravity="right"
-        android:layout_marginEnd="20dp"
-        tools:ignore="RtlHardcoded" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerInsetStart="16dp"
-        app:dividerInsetEnd="16dp"
-        app:dividerColor="@android:color/darker_gray"
-        android:layout_marginTop="20dp"
-        />
-</LinearLayout>
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/titulo_estadisticas"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/cardview_dark_background"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="#546e7a"
+                android:fontFamily="@font/montserrat"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv2"
+                app:layout_constraintEnd_toStartOf="@id/tv2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Partidos Totales"
+                android:textColor="#546e7a"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv1"
+                app:layout_constraintRight_toLeftOf="@id/tv3"
+                app:layout_constraintEnd_toStartOf="@id/tv3"
+                app:layout_constraintStart_toEndOf="@id/tv1"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Puntos Totales"
+                android:textColor="#546e7a"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv2"
+                android:textAlignment="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_list_estadisticas"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            tools:listitem="@layout/list_item_three" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_partidos"
+                android:layout_weight="1"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onClickRegresar"
+            android:text="@string/button_regresar"
+            android:drawableLeft="@drawable/ic_baseline_in"
+            android:textColor="#263238"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            tools:ignore="RtlHardcoded,UsingOnClickInXml" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

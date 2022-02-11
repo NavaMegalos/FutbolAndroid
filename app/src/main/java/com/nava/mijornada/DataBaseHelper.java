@@ -15,27 +15,29 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQL_DELETE_TABLE_ESTADO);
         db.execSQL(SQL_DELETE_TABLE_PARTIDO);
         db.execSQL(SQL_DELETE_TABLE_EQUIPO);
+        db.execSQL(SQL_DELETE_TABLE_RESULTADO);
         db.execSQL(SQL_DELETE_TABLE_PARTIDO_EQUIPO);
 
-        db.execSQL(SQL_CREATE_TABLE_ESTADO);
         db.execSQL(SQL_CREATE_TABLE_PARTIDO);
         db.execSQL(SQL_CREATE_TABLE_EQUIPO);
+        db.execSQL(SQL_CREATE_TABLE_RESULTADO);
         db.execSQL(SQL_CREATE_TABLE_PARTIDO_EQUIPO);
+        db.execSQL(SQL_INSERT_RESULTADOS);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(SQL_DELETE_TABLE_ESTADO);
         db.execSQL(SQL_DELETE_TABLE_PARTIDO);
         db.execSQL(SQL_DELETE_TABLE_EQUIPO);
+        db.execSQL(SQL_DELETE_TABLE_RESULTADO);
         db.execSQL(SQL_DELETE_TABLE_PARTIDO_EQUIPO);
 
-        db.execSQL(SQL_CREATE_TABLE_ESTADO);
         db.execSQL(SQL_CREATE_TABLE_PARTIDO);
         db.execSQL(SQL_CREATE_TABLE_EQUIPO);
+        db.execSQL(SQL_CREATE_TABLE_RESULTADO);
         db.execSQL(SQL_CREATE_TABLE_PARTIDO_EQUIPO);
+        db.execSQL(SQL_INSERT_RESULTADOS);
         onCreate(db);
     }
 

@@ -59,8 +59,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="230dp">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="230dp"
+            tools:listitem="@layout/list_item_three"></androidx.recyclerview.widget.RecyclerView>
 
 
         <LinearLayout

@@ -68,6 +68,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp1_altas_partido"
             style="@style/Widget.AppCompat.Spinner.DropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,6 +80,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sp2_altas_partido"
             style="@style/Widget.AppCompat.Spinner.DropDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,7 +111,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fecha_altas_partido"
+                android:id="@+id/et_fecha_altas_partido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -136,7 +138,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/hora_altas_partido"
+                android:id="@+id/et_hora_altas_partido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -153,7 +155,7 @@
             android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
+            android:onClick="onClickAgregar"
             tools:ignore="UsingOnClickInXml" />
 
         <com.google.android.material.button.MaterialButton

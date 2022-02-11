@@ -65,10 +65,11 @@
             android:padding="10dp"
             app:boxBackgroundColor="@color/white"
             app:startIconDrawable="@drawable/ic_baseline_add_team"
+            app:counterMaxLength="16"
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nombre_equipo_altas"
+                android:id="@+id/nombre_equipo_bajas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -92,12 +93,12 @@
             android:layout_marginTop="15dp"
             android:drawablePadding="5dp"
             android:fontFamily="@font/montserrat"
+            android:onClick="onClickEliminar"
             android:padding="10dp"
             android:text="@string/button_eliminar"
             android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
             tools:ignore="UsingOnClickInXml" />
 
 

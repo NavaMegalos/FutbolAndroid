@@ -36,10 +36,11 @@
     <string name="seleccion_equipos">Selecciona Los Equipos:</string>
     <string name="seleccion_baja_partido">Selecciona El Partido A Eliminar:</string>
     <string name="seleccion_partido">Selecciona El Partido:</string>
-    <string name="seleccion_resultado">Selecciona El Resultado:</string>
+    <string name="seleccion_resultado">Selecciona El Ganador:</string>
     <string name="datos_generales_partido">Datos Partido</string>
     <string name="asigna_fecha">Fecha:</string>
     <string name="asigna_hora">Hora:</string>
+    <string name="item">Item</string>
 <!--    HINT'S-->
     <string name="nombre_equipo">Nombre Equipo…</string>
     <string name="nombre_equipo1">Nombre Equipo 1…</string>

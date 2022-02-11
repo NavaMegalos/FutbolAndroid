@@ -1,5 +1,7 @@
 package com.nava.mijornada;
 
+import static com.nava.mijornada.ControlEstadistico.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -22,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         db.close();
     }
 
-    public boolean checkEquipos() {
+    public boolean checkEquipos(int minimo_equipos) {
         boolean bandera = false;
         DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM EQUIPO", null);
-        bandera = cursor.getCount() >= 2;
+        Cursor cursor = db.rawQuery("SELECT * FROM "+ Equipo.TABLE_NAME, null);
+        bandera = cursor.getCount() >= minimo_equipos;
         close(cursor, db, dbHelper);
 
         return bandera;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickPartidos(View view) {
-        if (!checkEquipos()) {
+        if (!checkEquipos(2)) {
             Toast.makeText(getApplicationContext(), "Necesitas crear por lo menos dos equipos para acceder a esta funcionalidad!...", Toast.LENGTH_SHORT).show();;
             return;
         }
@@ -48,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickEstadisticas(View view) {
-        if (!checkEquipos()) {
-            Toast.makeText(getApplicationContext(), "Necesitas crear por lo menos dos equipos para acceder a esta funcionalidad!...", Toast.LENGTH_SHORT).show();;
+        if (!checkEquipos(1)) {
+            Toast.makeText(getApplicationContext(), "Necesitas crear por lo menos un equipo para acceder a esta funcionalidad!...", Toast.LENGTH_SHORT).show();;
             return;
         }
         Intent i = new Intent(this, EstadisticaView.class);

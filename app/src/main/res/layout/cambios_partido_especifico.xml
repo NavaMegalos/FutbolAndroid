@@ -63,7 +63,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
-            android:text="@string/seleccion_equipos"
+            android:text="@string/titulo_menu_equipos"
             android:textSize="16sp"
             android:textStyle="bold" />
 

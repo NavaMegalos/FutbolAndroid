@@ -58,9 +58,10 @@
             android:textColor="@color/cardview_dark_background"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_item_cambios_equipo"
             android:layout_width="match_parent"
-            android:layout_height="230dp">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="230dp"
+            tools:listitem="@layout/list_item_two"></androidx.recyclerview.widget.RecyclerView>
 
 
         <LinearLayout

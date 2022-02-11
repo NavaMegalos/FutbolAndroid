@@ -65,6 +65,7 @@
             android:padding="10dp"
             app:boxBackgroundColor="@color/white"
             app:startIconDrawable="@drawable/ic_baseline_add_team"
+            app:counterMaxLength="16"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -97,7 +98,7 @@
             android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
+            android:onClick="onClickAgregar"
             tools:ignore="UsingOnClickInXml" />
 
 
