@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="153dp"
-        android:layout_height="58dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
         android:padding="5dp"
@@ -58,6 +58,15 @@
             android:textColor="@color/cardview_dark_background"/>
 
         <TextView
+            android:id="@+id/tv_id_partido_cambios"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -67,8 +76,8 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatSpinner
-            style="@style/Widget.AppCompat.Spinner.DropDown"
+        <TextView
+            android:id="@+id/tv_equipo1_cambios_partido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -78,8 +87,8 @@
             android:layout_marginBottom="5dp"
             />
 
-        <androidx.appcompat.widget.AppCompatSpinner
-            style="@style/Widget.AppCompat.Spinner.DropDown"
+        <TextView
+            android:id="@+id/tv_equipo2_cambios_partido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -88,6 +97,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             />
+
         <TextView
             android:layout_width="370dp"
             android:layout_height="wrap_content"
@@ -99,6 +109,7 @@
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_fecha_cambios_partido"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/fecha"
@@ -126,6 +137,7 @@
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_hora_cambios_partido"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/tiempo"
@@ -153,7 +165,7 @@
             android:textAlignment="center"
             android:textColor="#263238"
             android:textStyle="bold"
-            android:onClick="onClickAltas"
+            android:onClick="onClickRealizarCambios"
             tools:ignore="UsingOnClickInXml" />
 
         <com.google.android.material.button.MaterialButton

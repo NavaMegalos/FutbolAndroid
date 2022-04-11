@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="153dp"
-        android:layout_height="58dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
         android:padding="5dp"
@@ -57,104 +57,153 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:textColor="@color/cardview_dark_background"/>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:drawableEnd="@drawable/ic_baseline_add"
-            android:drawablePadding="5dp"
-            android:fontFamily="@font/montserrat"
-            android:onClick="onClickAltas"
-            android:padding="10dp"
-            android:text="@string/button_altas"
-            android:textAlignment="textStart"
-            android:textColor="#263238"
-            android:textStyle="bold"
-            tools:ignore="UsingOnClickInXml" />
+            android:layout_height="300dp">
 
-        <TextView
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_altas_partidos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
 
-        <com.google.android.material.button.MaterialButton
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button_bajas"
-            android:drawableEnd="@drawable/ic_baseline_remove"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickBajas"
-            tools:ignore="UsingOnClickInXml" />
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            >
 
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableEnd="@drawable/ic_baseline_add"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/montserrat"
+                android:onClick="onClickAltas"
+                android:padding="10dp"
+                android:text="@string/button_altas"
+                android:textAlignment="textStart"
+                android:textColor="#263238"
+                android:textStyle="bold"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:padding="10dp"
+                android:text="@string/info_altas_partidos"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_bajas"
+                android:drawableEnd="@drawable/ic_baseline_remove"
+                android:drawablePadding="5dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#263238"
+                android:onClick="onClickBajas"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:padding="10dp"
+                android:text="@string/info_bajas_partidos"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_cambios"
+                android:drawableEnd="@drawable/ic_baseline_rename"
+                android:drawablePadding="5dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#263238"
+                android:onClick="onClickCambios"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:padding="10dp"
+                android:text="@string/info_cambios_partidos"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_resultado"
+                android:drawableEnd="@drawable/ic_baseline_result"
+                android:drawablePadding="5dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#263238"
+                android:onClick="onClickResultados"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:padding="10dp"
+                android:text="@string/info_resultados_partidos"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_partidos_actuales"
+                android:drawableEnd="@drawable/ic_baseline_in_time"
+                android:drawablePadding="5dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#263238"
+                android:onClick="onClickResultados"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:padding="10dp"
+                android:text="@string/info_partidos_actuales"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        </ScrollView>
         <TextView
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/montserrat"
             android:padding="10dp"
-            android:text="@string/info_bajas_partidos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button_cambios"
-            android:drawableEnd="@drawable/ic_baseline_rename"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickCambios"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_cambios_partidos"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button_resultado"
-            android:drawableEnd="@drawable/ic_baseline_result"
-            android:drawablePadding="5dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textAlignment="textStart"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textColor="#263238"
-            android:onClick="onClickResultados"
-            tools:ignore="UsingOnClickInXml" />
-
-        <TextView
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat"
-            android:padding="10dp"
-            android:text="@string/info_resultados_partidos"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:text="@string/scroll_info"
             android:textSize="13sp"
             android:textStyle="bold" />
 
@@ -163,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
             android:drawableLeft="@drawable/ic_baseline_in"
             android:fontFamily="sans-serif-light"

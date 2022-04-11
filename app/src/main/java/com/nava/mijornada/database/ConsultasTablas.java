@@ -1,6 +1,6 @@
-package com.nava.mijornada;
+package com.nava.mijornada.database;
 
-import static com.nava.mijornada.ControlEstadistico.*;
+import static com.nava.mijornada.database.ControlEstadistico.*;
 
 public class ConsultasTablas {
 

@@ -35,8 +35,6 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="550dp"
@@ -52,47 +50,38 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:padding="5dp"
-            android:text="@string/titulo_menu_equipos"
+            android:text="@string/titulo_estadisticas"
             android:textAlignment="textEnd"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:textColor="@color/cardview_dark_background"/>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="@string/equipo"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/cardview_dark_background"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:textAlignment="textStart"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat"
-                android:padding="5dp"
-                android:text="No_Equipo"
-                android:layout_marginStart="25dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:textColor="@color/cardview_dark_background"/>
+        <TextView
+            android:id="@+id/tv_nombre_estadisticas_equipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            android:text="@string/equipo"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/cardview_dark_background"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat"
-                android:textAlignment="textEnd"
-                android:padding="5dp"
-                android:layout_marginEnd="25dp"
-                android:text="Nombre Equipo"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:textColor="@color/cardview_dark_background"/>
-        </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_item_cambios_equipo"
+            android:id="@+id/list_item_estadisticas_equipo"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             tools:listitem="@layout/list_item_two" />
-
 
 
         <LinearLayout
@@ -115,7 +104,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="15dp"/>
-
         </LinearLayout>
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -123,7 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="sans-serif-light"
             android:onClick="onClickRegresar"
             android:text="@string/button_regresar"

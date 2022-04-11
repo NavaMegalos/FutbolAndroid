@@ -1,10 +1,12 @@
-package com.nava.mijornada;
+package com.nava.mijornada.partido;
 
-import android.app.ProgressDialog;
+import static com.nava.mijornada.database.ControlEstadistico.*;
+import static com.nava.mijornada.database.DataBaseHelper.realizarConexion;
+
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +16,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.nava.mijornada.R;
 
 import java.util.ArrayList;
 
@@ -42,19 +46,24 @@ public class ResultadosPartido extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selectedItem = adapterView.getItemAtPosition(i).toString();
-                String idPartido = obtenerSubString(selectedItem);
+                String idPartido = obtenerSubString(selectedItem, "_");
 
                 ArrayList<String> equiposVs;
                 equiposVs = obtenerEquipos(idPartido);
                 String[] datosPartido;
                 datosPartido = obtenerFechaHora(idPartido);
+
                 assert datosPartido != null;
+                assert equiposVs != null;
+
                 equipo1.setText(equiposVs.get(0));
                 equipo2.setText(equiposVs.get(1));
                 fecha.setText(datosPartido[0]);
                 hora.setText(datosPartido[1]);
 
                 resultadosBD = obtenerEquipos(idPartido);
+                assert resultadosBD != null;
+
                 resultadosBD.add("EMPATE");
                 ArrayAdapter<String> misResultados =
                         new ArrayAdapter<String>
@@ -69,19 +78,19 @@ public class ResultadosPartido extends AppCompatActivity {
         });
     }
 
-    private String obtenerSubString(String cadena) {
-        int separador = cadena.indexOf('_')+1;
+    private String obtenerSubString(String cadena, String limitante) {
+        int separador = cadena.indexOf(limitante)+1;
         return cadena.substring(separador);
     }
 
     private String[] obtenerFechaHora(String idPartido) {
-        try{
-            DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-            SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(
-                    ControlEstadistico.Partido.TABLE_NAME,
-                    new String[]{ControlEstadistico.Partido.FECHA, ControlEstadistico.Partido.HORA_INICIO},
-                    ControlEstadistico.Partido._ID + " LIKE ? ",
+        String nombreEquipo = "";
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
+        Cursor cursor = db.query(
+                    Partido.TABLE_NAME,
+                    new String[]{Partido.FECHA, Partido.HORA_INICIO},
+                    Partido._ID + " LIKE ? ",
                     new String[]{idPartido},
                     null, null, null
             );
@@ -91,23 +100,18 @@ public class ResultadosPartido extends AppCompatActivity {
                 String hora = cursor.getString(1);
                 return new String[]{fecha, hora};
             }
-            cursor.close();
-            db.close();
-            dbHelper.close();
-        }catch (Exception e) {
-            Log.i("ERROR", e.getMessage());
-        }
+        cursor.close();
+        db.close();
         return null;
     }
     private String obtenerNombresEquipo(String idEquipo) {
         String nombreEquipo = "";
-        try{
-            DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-            SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(
-                    ControlEstadistico.Equipo.TABLE_NAME,
-                    new String[]{ControlEstadistico.Equipo.NOMBRE},
-                    ControlEstadistico.Equipo._ID + " LIKE ? ",
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
+        Cursor cursor = db.query(
+                    Equipo.TABLE_NAME,
+                    new String[]{Equipo.NOMBRE},
+                    Equipo._ID + " LIKE ? ",
                     new String[]{idEquipo},
                     null, null, null
             );
@@ -115,23 +119,18 @@ public class ResultadosPartido extends AppCompatActivity {
             if( cursor.getCount() >= 1 ) {
                 nombreEquipo = cursor.getString(0);
             }
-            cursor.close();
-            db.close();
-            dbHelper.close();
-        }catch (Exception e) {
-            Log.i("ERROR", e.getMessage());
-        }
+        cursor.close();
+        db.close();
         return nombreEquipo;
     }
     private ArrayList<String> obtenerEquipos(String idPartido) {
         ArrayList<String> equipos = new ArrayList<>();
-        try{
-            DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-            SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(
-                    ControlEstadistico.PartidoEquipo.TABLE_NAME,
-                    new String[]{ControlEstadistico.PartidoEquipo._ID_EQUIPO},
-                    ControlEstadistico.PartidoEquipo._ID_PARTIDO + " LIKE ? AND " + ControlEstadistico.PartidoEquipo._ID_RESULTADO + " LIKE ?",
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
+        Cursor cursor = db.query(
+                    PartidoEquipo.TABLE_NAME,
+                    new String[]{PartidoEquipo._ID_EQUIPO},
+                    PartidoEquipo._ID_PARTIDO + " LIKE ? AND " + PartidoEquipo._ID_RESULTADO + " LIKE ?",
                     new String[]{idPartido, "1"},
                     null, null, null
             );
@@ -143,22 +142,17 @@ public class ResultadosPartido extends AppCompatActivity {
             }else {
                 return null;
             }
-            cursor.close();
-            db.close();
-            dbHelper.close();
-        }catch (Exception e) {
-            Log.i("ERROR", e.getMessage());
-        }
+        cursor.close();
+        db.close();
         return equipos;
     }
     private ArrayList<String> obtenerPartidos() {
         ArrayList<String> detalles = new ArrayList<>();
         ArrayList<String> nombres;
-        try{
-            DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-            SQLiteDatabase db = dbHelper.getReadableDatabase();
-            Cursor cursor = db.query(
-                    ControlEstadistico.Partido.TABLE_NAME,
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
+        Cursor cursor = db.query(
+                    Partido.TABLE_NAME,
                     null,
                     null,
                     null,
@@ -166,10 +160,6 @@ public class ResultadosPartido extends AppCompatActivity {
             );
             if( cursor.getCount() >= 1 ) {
                 while(cursor.moveToNext()) {
-//                String id = cursor.getString(1);
-//                String idEquipo = cursor.getString(2);
-//                String cadena = "id: " + id + " id equipo: " + idEquipo;
-//                detalles.add(cadena);
                     String idPartido = cursor.getString(0);
                     nombres = obtenerEquipos(idPartido);
                     if(nombres != null) {
@@ -178,33 +168,86 @@ public class ResultadosPartido extends AppCompatActivity {
                     }
                 }
             }
-            cursor.close();
-            db.close();
-            dbHelper.close();
-        }catch (Exception e) {
-            Log.i("ERROR", e.getMessage());
-        }
+        cursor.close();
+        db.close();
         return detalles;
     }
 
-    public void onClickEliminar(View view) {
-        String partidoAEliminar = partidos.getSelectedItem().toString();
-        partidoAEliminar = obtenerSubString(partidoAEliminar);
-//        Toast.makeText(this, "ID: " + partidoAEliminar, Toast.LENGTH_SHORT).show();
-        try {
-            DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
-            db.delete(ControlEstadistico.Partido.TABLE_NAME, ControlEstadistico.Partido._ID + " =?", new String[]{partidoAEliminar});
-        }catch (Exception e) {
-            Log.i("ERROR", e.getMessage());
+    private ArrayList<String> obtenerIdEquipos(String idPartido) {
+        ArrayList<String> equipos = new ArrayList<>();
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
+        Cursor cursor = db.query(
+                PartidoEquipo.TABLE_NAME,
+                new String[]{PartidoEquipo._ID_EQUIPO},
+                PartidoEquipo._ID_PARTIDO + " LIKE ? AND " + PartidoEquipo._ID_RESULTADO + " LIKE ?",
+                new String[]{idPartido, "1"},
+                null, null, null
+        );
+        if( cursor.getCount() > 0 ) {
+            while(cursor.moveToNext()) {
+                String idEquipo = cursor.getString(0);
+                equipos.add(idEquipo);
+            }
+        }else {
+            return null;
+        }
+        cursor.close();
+        db.close();
+        return equipos;
+    }
+
+    private void asignarVictoriaDerrota(String idPartido, String idEquipo, String resultado) {
+        String nombreEquipo = obtenerNombresEquipo(idEquipo);
+        SQLiteDatabase db = realizarConexion("writable", this);
+        ContentValues values = new ContentValues();
+        if(nombreEquipo.equals(resultado))
+            values.put(PartidoEquipo._ID_RESULTADO, 2);
+        else
+            values.put(PartidoEquipo._ID_RESULTADO, 3);
+        assert db != null;
+        db.update(
+                PartidoEquipo.TABLE_NAME,
+                values,
+                PartidoEquipo._ID_PARTIDO + " LIKE ? AND " + PartidoEquipo._ID_EQUIPO + " LIKE ? ",
+                new String[]{idPartido, idEquipo}
+        );
+
+    }
+
+    private void asignarEmpate(String idPartido) {
+        SQLiteDatabase db = realizarConexion("writable", this);
+        ContentValues values = new ContentValues();
+        values.put(PartidoEquipo._ID_RESULTADO, 4);
+        assert db != null;
+        db.update(
+                PartidoEquipo.TABLE_NAME,
+                values,
+                PartidoEquipo._ID_PARTIDO + " LIKE ?",
+                new String[]{idPartido}
+        );
+    }
+
+    private void asignarResultado(String idPartido, String resultado) {
+        if(resultado.equals("EMPATE")) {
+            asignarEmpate(idPartido);
+        } else {
+            ArrayList<String> idEquipos = obtenerIdEquipos(idPartido);
+            assert idEquipos != null;
+            asignarVictoriaDerrota(idPartido, idEquipos.get(0), resultado);
+            asignarVictoriaDerrota(idPartido, idEquipos.get(1), resultado);
         }
 
-        //DIALOGO PARA MOSTRAR CARGANDO AL INSERTAR EL NOMBRE EN LA BD
-        ProgressDialog dialog = ProgressDialog.show(ResultadosPartido.this, "Verificando Registros",
-                "Eliminando partido...", true );
-        Toast.makeText(getApplicationContext(), "Partido Eliminado Exitosamente!...", Toast.LENGTH_SHORT).show();
-//
+    }
 
+    public void onClickAceptar(View view) {
+        String partidoAFinalizar = partidos.getSelectedItem().toString();
+        partidoAFinalizar = obtenerSubString(partidoAFinalizar, "_");
+        String ganador = resultados.getSelectedItem().toString();
+        asignarResultado(partidoAFinalizar, ganador);
+
+        Toast.makeText(getApplicationContext(), "Partido Actualizado Exitosamente!...", Toast.LENGTH_SHORT).show();
+        this.finish();
     }
 
     public void onClickRegresar(View view) {

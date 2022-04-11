@@ -1,12 +1,14 @@
-package com.nava.mijornada;
+package com.nava.mijornada.listviewadaptadores;
 
-public class DosItemsView {
+public class TresItemsView {
     private String textViewOne;
     private String textViewTwo;
+    private String textViewThree;
 
-    public DosItemsView(String textViewOne, String textViewTwo) {
+    public TresItemsView(String textViewOne, String textViewTwo, String textViewThree) {
         this.textViewOne = textViewOne;
         this.textViewTwo = textViewTwo;
+        this.textViewThree = textViewThree;
     }
 
     public String getTextViewOne() {
@@ -17,6 +19,10 @@ public class DosItemsView {
         return textViewTwo;
     }
 
+    public String getTextViewThree() {
+        return textViewThree;
+    }
+
     public void setTextViewOne(String textViewOne) {
         this.textViewOne = textViewOne;
     }
@@ -25,4 +31,7 @@ public class DosItemsView {
         this.textViewTwo = textViewTwo;
     }
 
+    public void setTextViewThree(String textViewThree) {
+        this.textViewThree = textViewThree;
+    }
 }

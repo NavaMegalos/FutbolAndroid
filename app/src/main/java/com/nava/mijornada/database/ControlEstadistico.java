@@ -1,4 +1,4 @@
-package com.nava.mijornada;
+package com.nava.mijornada.database;
 
 import android.provider.BaseColumns;
 

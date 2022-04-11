@@ -20,7 +20,7 @@
             android:padding="10dp"
             android:textAlignment="textStart"
             android:textColorHighlight="#263238"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -33,7 +33,7 @@
             android:padding="10dp"
             android:textAlignment="textEnd"
             android:textColorHighlight="#263238"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
 </androidx.cardview.widget.CardView>

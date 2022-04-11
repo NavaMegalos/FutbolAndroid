@@ -1,6 +1,7 @@
 package com.nava.mijornada;
 
-import static com.nava.mijornada.ControlEstadistico.*;
+import static com.nava.mijornada.database.ControlEstadistico.*;
+import static com.nava.mijornada.database.DataBaseHelper.realizarConexion;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -10,6 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.nava.mijornada.equipo.EquipoView;
+import com.nava.mijornada.estadisticas.EstadisticaView;
+import com.nava.mijornada.partido.PartidoView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,19 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void close(Cursor c, SQLiteDatabase db, DataBaseHelper dbHelper) {
+    public void close(Cursor c, SQLiteDatabase db) {
         c.close();
-        dbHelper.close();
         db.close();
     }
 
     public boolean checkEquipos(int minimo_equipos) {
         boolean bandera = false;
-        DataBaseHelper dbHelper = new DataBaseHelper(getApplicationContext());
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        SQLiteDatabase db = realizarConexion("readable", this);
+        assert db != null;
         Cursor cursor = db.rawQuery("SELECT * FROM "+ Equipo.TABLE_NAME, null);
         bandera = cursor.getCount() >= minimo_equipos;
-        close(cursor, db, dbHelper);
+        close(cursor, db);
 
         return bandera;
     }

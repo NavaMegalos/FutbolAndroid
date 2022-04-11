@@ -1,11 +1,11 @@
 <resources>
-
 <!--    TITLE'S-->
-    <string name="app_name">Control Estadistico</string>
+    <string name="app_name">Mi <br />\nCampeonato</string>
     <string name="titulo_menu">Menu Principal</string>
     <string name="titulo_menu_equipos">Equipos</string>
     <string name="titulo_menu_partidos">Partidos</string>
     <string name="titulo_estadisticas">Estadisticas</string>
+    <string name="equipo">Equipo</string>
 <!--    BUTTON'S-->
     <string name="button_equipos">Equipos</string>
     <string name="button_partidos">Partidos</string>
@@ -16,10 +16,11 @@
     <string name="button_bajas">Bajas</string>
     <string name="button_cambios">Cambios</string>
     <string name="button_agregar">Agregar</string>
-    <string name="button_resultado">Resultado</string>
+    <string name="button_resultado">Resultados</string>
     <string name="button_eliminar">Eliminar</string>
     <string name="button_actualizar_cambios">Realizar Cambios</string>
     <string name="button_aceptar">Aceptar</string>
+    <string name="button_partidos_actuales">Partidos Actuales</string>
 <!--    TEXT RELATED-TO BUTTON'S-->
     <string name="info_principal_equipos">- Crea Equipos.<br />\n- Realiza Cambios.<br />\n- Elimina Equipos.</string>
     <string name="info_principal_partidos">- Asigna Roles De Partidos.<br />\n- Realiza Cambios.<br />\n- Asigna El Resultado.</string>
@@ -33,6 +34,7 @@
     <string name="info_resultados_partidos">- Asigna Resultado A Algun Partido Previamente Creado.</string>
     <string name="info_nombre_nuevo_equipo">Asigna Un Nombre Al Nuevo Equipo.</string>
     <string name="info_nombre_baja_equipo">Ingresa El Nombre Del Equipo A Eliminar.</string>
+    <string name="info_partidos_actuales">- Visualiza la lista de los partidos que estan pendientes por jugar.</string>
     <string name="seleccion_equipos">Selecciona Los Equipos:</string>
     <string name="seleccion_baja_partido">Selecciona El Partido A Eliminar:</string>
     <string name="seleccion_partido">Selecciona El Partido:</string>
@@ -45,6 +47,8 @@
     <string name="nombre_equipo">Nombre Equipo…</string>
     <string name="nombre_equipo1">Nombre Equipo 1…</string>
     <string name="nombre_equipo2">Nombre Equipo 2…</string>
-    <string name="fecha">mm/dd/yy</string>
+    <string name="fecha">dd/mm/yyyy</string>
     <string name="tiempo">hh:mm:ss</string>
+<!--    SCROLLS WARNINGS-->
+    <string name="scroll_info">Deslice hacia abajo para ver mas opciones</string>
 </resources>

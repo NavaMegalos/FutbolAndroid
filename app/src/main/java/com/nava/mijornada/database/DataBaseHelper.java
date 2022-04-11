@@ -1,10 +1,11 @@
-package com.nava.mijornada;
+package com.nava.mijornada.database;
 
-import static com.nava.mijornada.ConsultasTablas.*;
+import static com.nava.mijornada.database.ConsultasTablas.*;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
@@ -43,5 +44,17 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
+    }
+
+    public static SQLiteDatabase realizarConexion(String readableOrWritable, Context context) {
+        try {
+            DataBaseHelper dbHelper = new DataBaseHelper(context);
+            return readableOrWritable.equals("readable")
+                    ? dbHelper.getReadableDatabase()
+                    : dbHelper.getWritableDatabase();
+        }catch(Exception e) {
+            Log.i("ERROR", e.getMessage());
+        }
+        return null;
     }
 }

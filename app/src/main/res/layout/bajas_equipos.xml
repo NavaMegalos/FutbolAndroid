@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="153dp"
-        android:layout_height="58dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
         android:padding="5dp"

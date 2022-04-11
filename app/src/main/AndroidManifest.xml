@@ -10,43 +10,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
         <activity
-            android:name=".AltasEquipo"
+            android:name=".equipo.AltasEquipo"
             android:exported="true">
         </activity>
         <activity
-            android:name=".BajasEquipo"
+            android:name=".equipo.BajasEquipo"
             android:exported="true">
         </activity>
         <activity
-            android:name=".CambiosEquipo"
+            android:name=".equipo.CambiosEquipo"
             android:exported="true">
         </activity>
         <activity
-            android:name=".AltasPartido"
+            android:name=".partido.AltasPartido"
             android:exported="true">
         </activity>
         <activity
-            android:name=".BajasPartido"
+            android:name=".partido.BajasPartido"
             android:exported="true">
         </activity>
         <activity
-            android:name=".CambiosPartido"
+            android:name=".partido.CambiosPartido"
             android:exported="true">
         </activity>
         <activity
-            android:name=".ResultadosPartido"
+            android:name=".partido.ResultadosPartido"
             android:exported="true">
         </activity>
         <activity
-            android:name=".PartidoView"
+            android:name=".partido.PartidoView"
             android:exported="true">
         </activity>
         <activity
-            android:name=".EstadisticaView"
+            android:name=".estadisticas.EstadisticaView"
             android:exported="true">
         </activity>
         <activity
-            android:name=".EquipoView"
+            android:name=".estadisticas.EstadisticasEquipo"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".equipo.EquipoView"
             android:exported="true">
         </activity>
         <activity
